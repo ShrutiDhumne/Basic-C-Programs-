@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<conio.h> 
+void function(int, int[], char[]);
+ 
+void main()
+{
+      int a = 20;
+      int arr[5] = {10,20,30,40,50};  
+      char str[30] = "\"fresh2refresh\"";
+ 
+      function(a, &arr[0], &str[0]);
+      getch();
+}
+ 
+void function(int a, int *arr, char *str)
+{
+    int i;
+    printf("value of a is %d\n\n",a);  
+    for (i=0;i<5;i++)
+      {
+ 					        // Accessing each variable
+         printf("value of arr[%d] is %d\n",i,arr[i]);  
+      }
+    printf("\nvalue of str is %s\n",str);  
+}
